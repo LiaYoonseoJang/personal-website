@@ -1,5 +1,9 @@
 import React from "react";
 import {   FaTasks, FaChartBar, FaCode, FaReact, FaPython, FaDatabase, FaPalette, FaUsers } from "react-icons/fa";
+import netflixImg from '../images/netflix.jpg';
+import paypalImg from '../images/paypal.jpg';
+import spotifyImg from '../images/spotify.png';
+
 
 const BOOTSTRAP_FOR_SKILL_ICON = "text-4xl mx-auto inline-block";
 const data = {
@@ -50,28 +54,27 @@ const data = {
     },
   ],
   
-  projects: [
+  case_studies: [
     {
-      title: "React tailwind portfolio",
-      description: "👨‍🎨 An open-source portfolio template built with React and Tailwind.",
-      tags: [
-        "template",
-        "portfolio",
-        "reactjs",
-        "tailwindcss"
-      ],
-      link: "https://github.com/braydentw/react-tailwind-portfolio"
+      title: "Netflix",
+      description: "Enhanced Personalized Recommendations to boost Netflix's user engagement and retention.",
+      image: netflixImg, // Place this image in your public/ folder
+      link: "/netflix-case-study", // Or use an external URL if you have one
+      buttonLabel: "View Case Study"
     },
     {
-      title: "My personal website",
-      description: "⚡ My portfolio built with NextJS and TailwindCSS.",
-      tags: [
-        "website",
-        "portfolio",
-        "nextjs",
-        "tailwindcss"
-      ],
-      link: "https://github.com/braydentW/braydentw"
+      title: "PayPal",
+      description: "", // You can add a teaser or leave it blank for 'Coming Soon'
+      image: paypalImg, // Place this image in your public/ folder
+      link: null, // No link yet
+      buttonLabel: "Coming Soon"
+    },
+    {
+      title: "Instagram",
+      description: "", // You can add a teaser or leave it blank for 'Coming Soon'
+      image: spotifyImg, // Place this image in your public/ folder
+      link: null, // No link yet
+      buttonLabel: "Coming Soon"
     }
   ]
 };
