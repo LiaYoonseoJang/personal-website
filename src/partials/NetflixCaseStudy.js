@@ -1,55 +1,66 @@
 import React from "react";
+import chartImg1 from '../images/chart-1.png';
+import chartImg2 from '../images/chart-2.png';
 
-const sectionTitle = "text-2xl font-bold mt-16 mb-4";
-const paragraph = "text-base mb-6";
-const list = "list-disc ml-8 mb-6";
-const subheading = "text-xl font-semibold mt-8 mb-2";
-const highlight = "font-bold";
-const bigTitle = "text-4xl font-bold mt-12 mb-6";
-const small = "text-base text-gray-700";
+
+// Tweak these styles for a homepage-matching feel:
+const sectionTitle = "text-2xl font-bold mt-14 mb-4 text-gray-900";
+const paragraph = "text-base mb-7 text-gray-700";
+const list = "mb-6 space-y-2 pl-5"; // Minimal, cleaner bullet look
+const subheading = "text-lg font-semibold mt-7 mb-3 text-gray-800";
+const highlight = "font-bold text-sky-700"; // Accent color
+const bigTitle = "text-3xl font-extrabold mt-12 mb-7 text-black";
 
 const NetflixCaseStudy = () => (
-  <div className="max-w-3xl mx-auto p-6 bg-white text-black">
-    {/* HEADER */}
-    <h1 className={bigTitle}>Bringing the Magic of Netflix to Personalized Streaming</h1>
-    <h2 className="text-lg mb-8">
-      Helping Netflix users discover and enjoy content tailored just for them
-    </h2>
+    <div className="min-h-screen bg-[#f6f8fa] py-10">
+      <div className="max-w-3xl mx-auto p-10 bg-white rounded-2xl shadow-xl">
+        {/* HEADER */}
+        <h1 className={bigTitle}>Bringing the Magic of Netflix to Personalized Streaming</h1>
+        <h2 className="text-base mb-10 text-gray-600">
+          Helping Netflix users discover and enjoy content tailored just for them
+        </h2>
+        <hr className="my-8 border-gray-200" />
+  
+        {/* CONTEXT */}
+        <div className={sectionTitle}>CONTEXT</div>
+        <p className={paragraph}>
+          With numerous streaming platforms available, Netflix faces the challenge of standing out in a saturated market. Users often feel overwhelmed by the selection, leading to decision fatigue. Despite Netflix’s algorithmic recommendations, many users struggle to find content that resonates with their preferences.
+        </p>
+        <p className={paragraph}>
+          This case study explores how to improve Netflix’s content discovery experience by refining the recommendation system to make it more personalized, relevant, and intuitive. By reducing decision fatigue and offering quicker, more relevant suggestions, the goal is to increase user engagement and retention. This study will examine the challenges, solutions and potential impact of improving content discovery on Netflix.
+        </p>
+        <hr className="my-8 border-gray-200" />
+  
+        {/* HYPOTHESIS */}
+        <div className={sectionTitle}>HYPOTHESIS</div>
+        <p className={paragraph}>
+          <span className={highlight}>If Netflix improves personalized content recommendations, then user engagement will increase.</span>
+        </p>
+        <hr className="my-8 border-gray-200" />
+  
+        {/* MARKET */}
+        <div className={sectionTitle}>THE MARKET</div>
+        <h3 className={subheading}>Where is the streaming market headed?</h3>
+        <p className={paragraph}>
+          Netflix leads the global streaming market with over 300 million paid subscribers and a 21% share in the U.S., just behind Amazon Prime Video. Despite strong growth, including 41 million new subscribers in 2024, users often feel overwhelmed by broad content recommendations.
+        </p>
+        <img src={chartImg1} alt="Netflix market share chart" className="my-6 w-full max-w-md mx-auto rounded-lg shadow" />
+        <img src={chartImg2} alt="Netflix market share chart" className="my-6 w-full max-w-md mx-auto rounded-lg shadow" />
 
-    {/* CONTEXT */}
-    <div className={sectionTitle}>CONTEXT</div>
-    <p className={paragraph}>
-      With numerous streaming platforms available, Netflix faces the challenge of standing out in a saturated market. Users often feel overwhelmed by the selection, leading to decision fatigue. Despite Netflix’s algorithmic recommendations, many users struggle to find content that resonates with their preferences.
-    </p>
-    <p className={paragraph}>
-      This case study explores how to improve Netflix’s content discovery experience by refining the recommendation system to make it more personalized, relevant, and intuitive. By reducing decision fatigue and offering quicker, more relevant suggestions, the goal is to increase user engagement and retention. This study will examine the challenges, solutions and potential impact of improving content discovery on Netflix.
-    </p>
-
-    {/* HYPOTHESIS */}
-    <div className={sectionTitle}>HYPOTHESIS</div>
-    <p className={paragraph}>
-      <span className={highlight}>If Netflix improves personalized content recommendations, then user engagement will increase.</span>
-    </p>
-
-    {/* MARKET */}
-    <div className={sectionTitle}>THE MARKET</div>
-    <h3 className={subheading}>Where is the streaming market headed?</h3>
-    <p className={paragraph}>
-      Netflix leads the global streaming market with over 300 million paid subscribers and a 21% share in the U.S., just behind Amazon Prime Video. Despite strong growth, including 41 million new subscribers in 2024, users often feel overwhelmed by broad content recommendations.
-    </p>
-    {/* You can add a chart image here when needed */}
-
-    {/* COMPETITION */}
-    <h3 className={subheading}>What other streaming companies exist?</h3>
-    <ol className={list}>
-      <li><span className={highlight}>Amazon Prime Video:</span> Offers a vast content library, including movies, TV shows, and exclusive original content. Prime Video also includes perks of Amazon Prime members.</li>
-      <li><span className={highlight}>Hulu:</span> Known for its TV show offerings, including next-day access to popular networks, as well as original series and movies.</li>
-      <li><span className={highlight}>Disney+:</span> Focuses on family-friendly content, including Disney classics, Pixar, Marvel, Star Wars, and National Geographic programming.</li>
-      <li><span className={highlight}>HBO Max:</span> Features a mix of premium content, including popular HBO series, films, and exclusive shows.</li>
-      <li><span className={highlight}>Apple TV+:</span> A relatively newer platform with a focus on original programming, including movies, documentaries, and series.</li>
-      <li><span className={highlight}>Peacock:</span> Offers a blend of NBCUniversal content, original programming, and a strong selection of movies and TV shows.</li>
-      <li><span className={highlight}>Paramount+:</span> Provides a library of CBS content, movies, and exclusive originals, along with live sports streaming.</li>
-    </ol>
+        {/* You can add a chart image here when needed */}
+  
+        {/* COMPETITION */}
+        <h3 className={subheading}>What other streaming companies exist?</h3>
+        <ol className={list + " list-decimal"}>
+          <li><span className={highlight}>Amazon Prime Video:</span> Offers a vast content library, including movies, TV shows, and exclusive original content. Prime Video also includes perks of Amazon Prime members.</li>
+          <li><span className={highlight}>Hulu:</span> Known for its TV show offerings, including next-day access to popular networks, as well as original series and movies.</li>
+          <li><span className={highlight}>Disney+:</span> Focuses on family-friendly content, including Disney classics, Pixar, Marvel, Star Wars, and National Geographic programming.</li>
+          <li><span className={highlight}>HBO Max:</span> Features a mix of premium content, including popular HBO series, films, and exclusive shows.</li>
+          <li><span className={highlight}>Apple TV+:</span> A relatively newer platform with a focus on original programming, including movies, documentaries, and series.</li>
+          <li><span className={highlight}>Peacock:</span> Offers a blend of NBCUniversal content, original programming, and a strong selection of movies and TV shows.</li>
+          <li><span className={highlight}>Paramount+:</span> Provides a library of CBS content, movies, and exclusive originals, along with live sports streaming.</li>
+        </ol>
+        <hr className="my-8 border-gray-200" />
 
     {/* AUDIENCE */}
     <div className={sectionTitle}>THE AUDIENCE</div>
@@ -280,7 +291,7 @@ const NetflixCaseStudy = () => (
     <p className={paragraph}>
     By empowering users to control their content discovery experience and making recommendations more relevant, Netflix can stand out as the most intuitive and enjoyable streaming platform. This approach not only reduces decision fatigue but also builds deeper loyalty and delight.
     </p>
-
+    </div>
   </div>
 );
 
