@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Projects from "./Projects";
 
 const case_studies = [
@@ -13,10 +13,10 @@ const case_studies = [
 const MainHome = () => {
   return (
     <div>
-      {/* Other sections like Hero/About/etc */}
       <Projects case_studies={case_studies} />
     </div>
   );
 };
 
 export default MainHome;
+*/
