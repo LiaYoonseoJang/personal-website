@@ -3,6 +3,7 @@ import {   FaTasks, FaChartBar, FaCode, FaReact, FaPython, FaDatabase, FaPalette
 import netflixImg from '../images/netflix.jpg';
 import paypalImg from '../images/paypal.jpg';
 import spotifyImg from '../images/spotify.png';
+import mininiImg from '../images/minini.jpg';
 
 
 const BOOTSTRAP_FOR_SKILL_ICON = "text-4xl mx-auto inline-block";
@@ -75,6 +76,17 @@ const data = {
       image: spotifyImg, // Place this image in your public/ folder
       link: null, // No link yet
       buttonLabel: "Coming Soon"
+    }
+  ],
+
+  projects: [
+    {
+      title: "Minini MBTI Test",
+      description: "A personality quiz built with HTML/CSS/JS featuring Minini characters and result logic.",
+      link: "https://mbti-test-ashen.vercel.app/",
+      image: mininiImg,
+      tags: ["HTML", "CSS", "JavaScript"],
+      buttonLabel: "View Case Study"
     }
   ]
 };

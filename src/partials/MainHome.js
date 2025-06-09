@@ -4,6 +4,7 @@ import About from "./About";
 import Card from "./Card";
 import Footer from "./Footer";
 import Projects from "./Projects";
+import CaseStudies from "./CaseStudies"; // ✅ CORRECT now
 import Skills from "./Skills";
 import data from "../assets/data";
 
@@ -12,10 +13,17 @@ const MainHome = () => (
     <div data-aos="fade-down" data-aos-duration="800">
       <Card name={data.name} title={data.title} social={data.social} />
     </div>
+
     <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
       <About title={data.about.title} description={data.about.description} />
       <Skills skills={data.skills} />
-      <Projects case_studies={data.case_studies} />
+
+      {/* 🔹 Show Project Section */}
+      <Projects projects={data.projects} />
+
+      {/* 🔹 Show Case Studies Section */}
+      <CaseStudies case_studies={data.case_studies} />
+
       <Footer github={data.social.github} />
     </div>
   </div>
