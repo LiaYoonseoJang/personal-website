@@ -4,6 +4,7 @@ import netflixImg from '../images/netflix.jpg';
 import paypalImg from '../images/paypal.jpg';
 import spotifyImg from '../images/spotify.png';
 import mininiImg from '../images/minini.jpg';
+import econobotImg from '../images/econobot.png';
 
 
 const BOOTSTRAP_FOR_SKILL_ICON = "text-4xl mx-auto inline-block";
@@ -87,7 +88,16 @@ const data = {
       image: mininiImg,
       tags: ["HTML", "CSS", "JavaScript"],
       buttonLabel: "View Case Study"
+    },
+    {
+      title: "EconoBot",
+      description: "An AI-powered Streamlit chatbot that summarizes economic news articles in plain English. Just paste a URL to get key takeaways.",
+      link: "https://econobot-news-summarizer-3cygyveivxsjkfgz8smql2.streamlit.app/", // Use your actual deployed link
+      image: econobotImg, // Or import like you did for others
+      tags: ["Streamlit", "Python", "OpenAI", "NLP"],
+      buttonLabel: "Try EconoBot"
     }
+    
   ]
 };
 export default data;
