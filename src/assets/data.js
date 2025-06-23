@@ -87,7 +87,7 @@ const data = {
       link: "https://mbti-test-ashen.vercel.app/",
       image: mininiImg,
       tags: ["HTML", "CSS", "JavaScript"],
-      buttonLabel: "View Case Study"
+      buttonLabel: "Try Minini MBTI Test"
     },
     {
       title: "EconoBot",

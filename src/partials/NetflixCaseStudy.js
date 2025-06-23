@@ -2,7 +2,7 @@ import React from "react";
 import chartImg1 from '../images/chart-1.png';
 import chartImg2 from '../images/chart-2.png';
 import netflixImg from '../images/netflix_logo.png'; 
-
+import { Link } from "react-router-dom";
 
 const sectionTitle = "text-2xl font-bold mt-14 mb-4 text-red-500";
 const paragraph = "text-base mb-7 text-gray-700";
@@ -424,18 +424,16 @@ const NetflixCaseStudy = () => (
       </p>
       <hr className="my-8 border-gray-200" />
 
-      {/* Optional CTA */}
-
-      <div className="text-center mt-8">
-        <a
-          href="/projects"
-          className="inline-block px-6 py-3 text-lg font-semibold border border-red-600 text-red-500 hover:bg-red-600 hover:text-white rounded-lg transition"
-        >
-          Return to Projects
-        </a>
-      </div>
-      </div>
-      </div>
-      );
-
+       {/* Optional CTA */}
+  <div className="text-center mt-8">
+    <Link
+      to="/projects"
+      className="inline-block px-6 py-3 text-lg font-semibold border border-red-600 text-red-500 hover:bg-red-600 hover:text-white rounded-lg transition"
+    >
+      Return to Projects
+    </Link>
+    </div>
+    </div>
+  </div>
+);
       export default NetflixCaseStudy;
