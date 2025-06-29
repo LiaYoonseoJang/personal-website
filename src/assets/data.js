@@ -2,7 +2,7 @@ import React from "react";
 import {   FaTasks, FaChartBar, FaCode, FaReact, FaPython, FaDatabase, FaPalette, FaUsers } from "react-icons/fa";
 import netflixImg from '../images/netflix.jpg';
 import paypalImg from '../images/paypal.jpg';
-import spotifyImg from '../images/spotify.png';
+import instaImg from '../images/instagram.png';
 import mininiImg from '../images/minini.jpg';
 import econobotImg from '../images/econobot.png';
 
@@ -65,19 +65,19 @@ const data = {
       buttonLabel: "View Case Study"
     },
     {
+      title: "Instagram Algorithm Transparency",
+      description: "A case study exploring how Instagram can rebuild user trust through algorithm transparency, creator tools, and feed personalization for Gen Z users.",
+      image: instaImg, // If you're using an imported image, make sure to import it like: import instaLogo from '../images/instagram_logo.png';
+      link: "/instagram-case-study", // This should match the route you defined
+      buttonLabel: "View Case Study"
+    }, 
+    {
       title: "PayPal",
       description: "", // You can add a teaser or leave it blank for 'Coming Soon'
       image: paypalImg, // Place this image in your public/ folder
       link: null, // No link yet
       buttonLabel: "Coming Soon"
-    },
-    {
-      title: "Instagram",
-      description: "", // You can add a teaser or leave it blank for 'Coming Soon'
-      image: spotifyImg, // Place this image in your public/ folder
-      link: null, // No link yet
-      buttonLabel: "Coming Soon"
-    }
+    }   
   ],
 
   projects: [

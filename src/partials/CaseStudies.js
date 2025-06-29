@@ -20,3 +20,5 @@ const CaseStudies = ({ case_studies }) => {
 };
 
 export default CaseStudies;
+
+

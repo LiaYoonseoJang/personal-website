@@ -427,7 +427,7 @@ const NetflixCaseStudy = () => (
        {/* Optional CTA */}
   <div className="text-center mt-8">
     <Link
-      to="/projects"
+      to="/"
       className="inline-block px-6 py-3 text-lg font-semibold border border-red-600 text-red-500 hover:bg-red-600 hover:text-white rounded-lg transition"
     >
       Return to Projects

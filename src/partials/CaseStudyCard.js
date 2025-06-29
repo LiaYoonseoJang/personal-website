@@ -18,13 +18,12 @@ const CaseStudyCard = ({ case_study }) => {
     <div className="group w-full sm:w-1/2 m-4 mx-auto p-6 rounded-xl border-2 border-gray-300 bg-black">
       <h1 className="text-3xl text-center font-bold text-cyan-200 mb-4">{title}</h1>
 
-      {image && (
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-48 object-cover rounded-lg mx-auto mb-4"
-        />
-      )}
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-48 object-contain bg-white rounded-lg mx-auto mb-4"
+      />
+
 
       {description && (
         <p className="text-cyan-100 mb-4">{description}</p>
