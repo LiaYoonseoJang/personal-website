@@ -107,21 +107,21 @@ const NetflixCaseStudy = () => (
           <h2 className="text-xl font-bold text-gray-900 mb-4">Pain Points</h2>
           <div className="space-y-4">
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl">😤</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Decision fatigue is real</p>
                 <p className="text-gray-600 text-sm mt-1">A user watching 6 hrs/week may spend 1.5+ hrs/month just choosing what to watch. The scroll loop is frustrating, not enjoyable.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl">🔄</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Recommendations feel stale</p>
                 <p className="text-gray-600 text-sm mt-1">The algorithm is slow to adapt when user preferences shift. Users who finish a genre binge keep seeing the same type of content weeks later.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl">💎</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Hidden gems stay hidden</p>
                 <p className="text-gray-600 text-sm mt-1">Niche titles that users would love get buried under mainstream recommendations, making the library feel smaller than it is.</p>
@@ -185,19 +185,19 @@ const NetflixCaseStudy = () => (
               </div>
               <p className="text-gray-600 text-sm mb-3">Let users ask in natural language: "Find me a suspenseful thriller with a twist." Reduces browsing but requires advanced NLP and risks slow adoption.</p>
               <div className="flex gap-4 text-xs">
-                <span className="text-green-600">✓ Highly interactive</span>
+                <span className="text-green-600">Highly interactive</span>
                 <span className="text-red-500">✗ Hard to build & adopt</span>
               </div>
             </div>
             <div className="border-2 border-red-200 rounded-xl p-5 bg-red-50">
               <div className="flex justify-between items-start mb-2">
-                <p className="font-semibold text-gray-900">2. Enhanced Personalized Recommendations ⭐ Selected</p>
+                <p className="font-semibold text-gray-900">2. Enhanced Personalized Recommendations — Selected</p>
                 <span className="text-xs px-2 py-1 bg-green-50 text-green-600 rounded-full border border-green-100">Best fit</span>
               </div>
               <p className="text-gray-600 text-sm mb-3">Mood-based categories ("Late Night Laughs", "Mind-Bending Thrillers"), a Region Selector, and a Preference Control tab. Builds on existing systems with incremental improvements.</p>
               <div className="flex gap-4 text-xs">
-                <span className="text-green-600">✓ Feasible & scalable</span>
-                <span className="text-green-600">✓ High user impact</span>
+                <span className="text-green-600">Feasible & scalable</span>
+                <span className="text-green-600">High user impact</span>
               </div>
             </div>
             <div className="border border-gray-100 rounded-xl p-5">
@@ -207,7 +207,7 @@ const NetflixCaseStudy = () => (
               </div>
               <p className="text-gray-600 text-sm mb-3">User-generated playlists shared with friends or the Netflix community. Differentiating, but risks underuse and requires moderation.</p>
               <div className="flex gap-4 text-xs">
-                <span className="text-green-600">✓ Community-building</span>
+                <span className="text-green-600">Community-building</span>
                 <span className="text-red-500">✗ Adoption uncertainty</span>
               </div>
             </div>

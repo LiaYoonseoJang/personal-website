@@ -118,21 +118,21 @@ const InstagramCaseStudy = () => (
           </div>
           <div className="space-y-4">
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl">❓</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Feed feels unpredictable and arbitrary</p>
                 <p className="text-gray-600 text-sm mt-1">Users can't build mental models of how their feed is curated, making every scroll feel like a gamble rather than a personalized experience.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl">📉</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Creators feel disempowered</p>
                 <p className="text-gray-600 text-sm mt-1">Without knowing why a post performed well or poorly, creators can't improve. Frustration leads to posting less or leaving the platform.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl">🔒</span>
+              <span className="text-xl"></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">No control over the experience</p>
                 <p className="text-gray-600 text-sm mt-1">Instagram offers almost no tools to shape what you see. Users want to adjust for themselves — not have an invisible system decide for them.</p>
@@ -149,12 +149,12 @@ const InstagramCaseStudy = () => (
           <h2 className="text-xl font-bold text-gray-900 mb-4">Where the Pain Points Hit</h2>
           <div className="space-y-2">
             {[
-              { emoji: "🔓", step: "Login", pain: "Opens app to browse or post — no sense of what they'll see" },
-              { emoji: "📜", step: "Feed Browse", pain: "Content appears in unexplained order — confusion about why certain posts surface" },
-              { emoji: "🔍", step: "Explore", pain: "Suggested content doesn't match interests; no transparency labels" },
-              { emoji: "❤️", step: "Engage", pain: "Likes/comments feel pointless — no feedback on how actions shape future recommendations" },
-              { emoji: "📸", step: "Post Content", pain: "Post goes live but reach feels random and unexplainable" },
-              { emoji: "📊", step: "Check Insights", pain: "Metrics exist but don't explain why reach was high or low" },
+              { emoji: "", step: "Login", pain: "Opens app to browse or post — no sense of what they'll see" },
+              { emoji: "", step: "Feed Browse", pain: "Content appears in unexplained order — confusion about why certain posts surface" },
+              { emoji: "", step: "Explore", pain: "Suggested content doesn't match interests; no transparency labels" },
+              { emoji: "", step: "Engage", pain: "Likes/comments feel pointless — no feedback on how actions shape future recommendations" },
+              { emoji: "", step: "Post Content", pain: "Post goes live but reach feels random and unexplainable" },
+              { emoji: "", step: "Check Insights", pain: "Metrics exist but don't explain why reach was high or low" },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-xl items-start">
                 <span className="text-lg">{item.emoji}</span>
