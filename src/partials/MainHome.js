@@ -16,7 +16,7 @@ const MainHome = () => {
         <div style={{ maxWidth: 800, margin: "0 auto", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontWeight: 600, fontSize: 15, color: "#111", letterSpacing: "-0.3px" }}>Lia Jang</span>
           <div style={{ display: "flex", gap: 24 }}>
-            {[["About", "#about"], ["Experience", "#experience"], ["Skills", "#skills"], ["Projects", "#projects"], ["Case Studies", "#cases"]].map(([label, href]) => (
+            {[["About", "#about"], ["Why PM", "#why-pm"], ["Experience", "#experience"], ["Skills", "#skills"], ["Projects", "#projects"], ["Case Studies", "#cases"]].map(([label, href]) => (
               <a key={href} href={href} style={{ fontSize: 13, color: "#666", textDecoration: "none", fontWeight: 450 }}
                 onMouseOver={e => e.target.style.color = "#111"}
                 onMouseOut={e => e.target.style.color = "#666"}>
@@ -70,6 +70,25 @@ const MainHome = () => {
               <img src={profileImg} alt={name}
                 style={{ width: 108, height: 108, borderRadius: "50%", objectFit: "cover", objectPosition: "top", border: "3px solid #fff", boxShadow: "0 4px 24px rgba(0,0,0,0.10)" }} />
             </div>
+          </div>
+        </section>
+
+        {/* WHY PM */}
+        <section id="why-pm" style={{ padding: "48px 0", borderBottom: "1px solid #f0f0f0" }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", marginBottom: 20 }}>Why PM</p>
+          <div style={{ maxWidth: 620 }}>
+            <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8, marginBottom: 16 }}>
+              I've always been drawn to the space where computer science and economics meet — where technical systems create real-world behavior, and where data tells a human story. But what pushed me toward product management specifically was something simpler: I wanted to be the one asking "how can this be better?" rather than waiting for someone to hand me the answer.
+            </p>
+            <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8, marginBottom: 16 }}>
+              The moment it clicked was at Juliette. I ran user interviews, identified friction points in the AR/VR experience, and proposed a feature based on what I'd heard. When I saw that feature ship in the actual product, something stuck. It wasn't just about building — it was about listening first, then building the right thing.
+            </p>
+            <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8, marginBottom: 16 }}>
+              At EarthMera, that feeling deepened. Running A/B tests on onboarding flows and watching the data validate (or challenge) a hypothesis made me realize this was the kind of work I wanted to do every day: stay close to users, make decisions grounded in evidence, and own the outcome.
+            </p>
+            <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8 }}>
+              PM sits at the intersection of everything I care about — technical depth, user empathy, and the autonomy to drive something forward. That's not a role I fell into. It's one I've been building toward.
+            </p>
           </div>
         </section>
 

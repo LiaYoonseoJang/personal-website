@@ -15,7 +15,7 @@ const data = {
   about: {
     title: "About Me",
     description:
-      "I'm Lia Yoonseo Jang, a Computer Science & Economics graduate from NYU, joining Capgemini Invent as an Associate Consultant in August 2025. I'm drawn to product management because I believe the best products emerge at the intersection of user empathy, data-driven thinking, and technical feasibility — and I've spent the last few years building exactly that skill set. From designing an AR/VR experience that shipped to real users, to conducting user research on algorithm transparency for Gen Z, I care about understanding why people behave the way they do and translating those insights into products that genuinely improve their lives.",
+      "I'm Lia Yoonseo Jang, a Computer Science & Economics graduate from NYU, joining Capgemini Invent as an Associate Consultant in August 2026. I'm drawn to product management because I believe the best products emerge at the intersection of user empathy, data-driven thinking, and technical feasibility — and I've spent the last few years building exactly that skill set. From designing an AR/VR experience that shipped to real users, to conducting user research on algorithm transparency for Gen Z, I care about understanding why people behave the way they do and translating those insights into products that genuinely improve their lives.",
   },
 
   skills: [
