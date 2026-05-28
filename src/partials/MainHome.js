@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Experience from "./Experience";
 import data from "../assets/data";
 import profileImg from "../images/profile.jpg";
 
+const useTypingEffect = (words, typingSpeed = 80, deletingSpeed = 50, pauseTime = 1800) => {
+  const [displayed, setDisplayed] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = words[wordIndex];
+    let timeout;
+    if (!isDeleting && displayed.length < current.length) {
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), typingSpeed);
+    } else if (!isDeleting && displayed.length === current.length) {
+      timeout = setTimeout(() => setIsDeleting(true), pauseTime);
+    } else if (isDeleting && displayed.length > 0) {
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), deletingSpeed);
+    } else if (isDeleting && displayed.length === 0) {
+      setIsDeleting(false);
+      setWordIndex((prev) => (prev + 1) % words.length);
+    }
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
+
+  return displayed;
+};
+
 const MainHome = () => {
   const { name, social, about, skills, projects, case_studies } = data;
+  const typedText = useTypingEffect(["Product Manager", "Problem Solver", "Data-Driven Thinker", "Aspiring PM"]);
 
   return (
     <div style={{ fontFamily: "'Inter', -apple-system, sans-serif", background: "#fafafa", minHeight: "100vh" }}>
@@ -34,13 +59,16 @@ const MainHome = () => {
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 40, alignItems: "center" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-                <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999" }}>Product Manager</span>
-                <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#ddd" }}></span>
                 <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999" }}>Capgemini Invent · Aug 2026</span>
               </div>
-              <h1 style={{ fontSize: 40, fontWeight: 700, color: "#111", lineHeight: 1.15, letterSpacing: "-1px", marginBottom: 16 }}>
+              <h1 style={{ fontSize: 40, fontWeight: 700, color: "#111", lineHeight: 1.15, letterSpacing: "-1px", marginBottom: 8 }}>
                 {name}
               </h1>
+              <div style={{ fontSize: 20, fontWeight: 500, color: "#333", marginBottom: 20, minHeight: 32, letterSpacing: "-0.3px" }}>
+                <span>{typedText}</span>
+                <span style={{ display: "inline-block", width: 2, height: "1.1em", background: "#111", marginLeft: 2, verticalAlign: "middle", animation: "blink 1s step-end infinite" }} />
+                <style>{`@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`}</style>
+              </div>
               <p style={{ fontSize: 16, color: "#555", lineHeight: 1.7, maxWidth: 480, marginBottom: 28 }}>
                 {about.description}
               </p>
