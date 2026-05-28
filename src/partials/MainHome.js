@@ -36,7 +36,7 @@ const MainHome = () => {
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
                 <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999" }}>Product Manager</span>
                 <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#ddd" }}></span>
-                <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999" }}>Capgemini Invent · Aug 2025</span>
+                <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999" }}>Capgemini Invent · Aug 2026</span>
               </div>
               <h1 style={{ fontSize: 40, fontWeight: 700, color: "#111", lineHeight: 1.15, letterSpacing: "-1px", marginBottom: 16 }}>
                 {name}
