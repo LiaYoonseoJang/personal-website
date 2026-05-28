@@ -16,7 +16,7 @@ const MainHome = () => {
         <div style={{ maxWidth: 800, margin: "0 auto", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontWeight: 600, fontSize: 15, color: "#111", letterSpacing: "-0.3px" }}>Lia Jang</span>
           <div style={{ display: "flex", gap: 24 }}>
-            {[["About", "#about"], ["Why PM", "#why-pm"], ["Experience", "#experience"], ["Skills", "#skills"], ["Projects", "#projects"], ["Case Studies", "#cases"]].map(([label, href]) => (
+            {[["About", "#about"], ["Why PM", "#why-pm"], ["Experience", "#experience"], ["Skills", "#skills"], ["Case Studies", "#cases"], ["Projects", "#projects"]].map(([label, href]) => (
               <a key={href} href={href} style={{ fontSize: 13, color: "#666", textDecoration: "none", fontWeight: 450 }}
                 onMouseOver={e => e.target.style.color = "#111"}
                 onMouseOut={e => e.target.style.color = "#666"}>
@@ -130,30 +130,6 @@ const MainHome = () => {
         {/* EXPERIENCE */}
         <Experience />
 
-        {/* CASE STUDIES */}
-        <section id="cases" style={{ padding: "48px 0", borderBottom: "1px solid #f0f0f0" }}>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", marginBottom: 20 }}>Case studies</p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {case_studies.map((cs, i) => (
-              <Link key={i} to={cs.link}
-                style={{ textDecoration: "none", display: "grid", gridTemplateColumns: "auto 1fr auto", gap: 18, alignItems: "center", background: "#fff", border: "1px solid #f0f0f0", borderRadius: 14, padding: "18px 22px", transition: "border-color 0.2s, box-shadow 0.2s" }}
-                onMouseOver={e => { e.currentTarget.style.borderColor = "#ccc"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
-                onMouseOut={e => { e.currentTarget.style.borderColor = "#f0f0f0"; e.currentTarget.style.boxShadow = "none"; }}>
-                <img src={cs.image} alt={cs.title} style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover", border: "1px solid #f0f0f0" }} />
-                <div>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#111", marginBottom: 3 }}>{cs.title} — {cs.subtitle}</p>
-                  <p style={{ fontSize: 12, color: "#888", lineHeight: 1.5 }}>{cs.description.slice(0, 90)}...</p>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
-                  {i === 0 && <span style={{ fontSize: 11, fontWeight: 600, color: "#16a34a", background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: 20, padding: "3px 10px" }}>↓15% browse time</span>}
-                  {i === 1 && <span style={{ fontSize: 11, fontWeight: 600, color: "#2563eb", background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: 20, padding: "3px 10px" }}>↑ creator trust</span>}
-                  <span style={{ fontSize: 18, color: "#ccc" }}>→</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
         {/* PROJECTS */}
         <section id="projects" style={{ padding: "48px 0", borderBottom: "1px solid #f0f0f0" }}>
           <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", marginBottom: 20 }}>Projects</p>
@@ -178,6 +154,30 @@ const MainHome = () => {
                   </a>
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CASE STUDIES */}
+        <section id="cases" style={{ padding: "48px 0", borderBottom: "1px solid #f0f0f0" }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", marginBottom: 20 }}>Case studies</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {case_studies.map((cs, i) => (
+              <Link key={i} to={cs.link}
+                style={{ textDecoration: "none", display: "grid", gridTemplateColumns: "auto 1fr auto", gap: 18, alignItems: "center", background: "#fff", border: "1px solid #f0f0f0", borderRadius: 14, padding: "18px 22px", transition: "border-color 0.2s, box-shadow 0.2s" }}
+                onMouseOver={e => { e.currentTarget.style.borderColor = "#ccc"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
+                onMouseOut={e => { e.currentTarget.style.borderColor = "#f0f0f0"; e.currentTarget.style.boxShadow = "none"; }}>
+                <img src={cs.image} alt={cs.title} style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover", border: "1px solid #f0f0f0" }} />
+                <div>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#111", marginBottom: 3 }}>{cs.title} — {cs.subtitle}</p>
+                  <p style={{ fontSize: 12, color: "#888", lineHeight: 1.5 }}>{cs.description.slice(0, 90)}...</p>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+                  {i === 0 && <span style={{ fontSize: 11, fontWeight: 600, color: "#16a34a", background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: 20, padding: "3px 10px" }}>↓15% browse time</span>}
+                  {i === 1 && <span style={{ fontSize: 11, fontWeight: 600, color: "#2563eb", background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: 20, padding: "3px 10px" }}>↑ creator trust</span>}
+                  <span style={{ fontSize: 18, color: "#ccc" }}>→</span>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
