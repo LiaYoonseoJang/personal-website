@@ -45,7 +45,7 @@ const data = {
       icon: "✏️",
     },
     {
-      skillName: "Stakeholder Mgmt",
+      skillName: "Stakeholder Management",
       skillDesc: "Cross-functional alignment, consulting",
       icon: "🤝",
     },
