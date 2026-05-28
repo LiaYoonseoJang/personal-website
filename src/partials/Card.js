@@ -1,61 +1,71 @@
 import React from "react";
 import profile from "../images/profile-circle.png";
-import { FaGithub } from "react-icons/fa";
-import { FaDribbble } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
-function Card({ name, title, social: { github, dribbble, twitter, email } }) {
+function Card({ name, title, subtitle, social }) {
+  const { LinkedIn, email, github } = social || {};
   return (
     <div className="w-full">
-      <div className="flex flex-col justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5">
-        <div className="">
-          <img
-            className="w-32 mx-auto shadow-xl rounded-full"
-            src={profile}
-            alt="Profile face"
-          />
-        </div>
+      <div className="flex flex-col justify-center max-w-sm mx-auto bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
+        <img
+          className="w-28 mx-auto rounded-full border-4 border-gray-100 shadow-md"
+          src={profile}
+          alt="Lia Jang profile"
+        />
         <div className="text-center mt-5">
-          <p className="text-xl sm:text-2xl font-semibold text-gray-900">
-            {name}
-          </p>
-          <p className="text-xs sm:text-base text-gray-600 pt-2 pb-4 px-5 w-auto inline-block border-b-2">
-            {title}
-          </p>
-          <div className="flex align-center justify-center mt-4">
-            <a
-              className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-gray-800 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
-              href={github}
-            >
-              <FaGithub />
-              <span className="sr-only">Github</span>
-            </a>
-            <a
-              className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-pink-600 hover:bg-pink-600 rounded-full hover:text-white transition-colors duration-300"
-              href={dribbble}
-            >
-              <FaDribbble />
-              <span className="sr-only">Dribble</span>
-            </a>
-            <a
-              className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-blue-500 hover:bg-blue-500 rounded-full hover:text-white transition-colors duration-300"
-              href={twitter}
-            >
-              <FaTwitter />
-              <span className="sr-only">Twitter</span>
-            </a>
-            <a
-              className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-teal-500 hover:bg-teal-500 rounded-full hover:text-white transition-colors duration-300"
-              href={"https://mail.google.com/mail/?view=cm&fs=1&to=" + email}
-            >
-              <FaRegEnvelope />
-              <span className="sr-only">Email</span>
-            </a>
+          <p className="text-2xl font-bold text-gray-900">{name}</p>
+          <p className="text-base font-semibold text-indigo-600 mt-1">{title}</p>
+          <p className="text-sm text-gray-500 mt-1 pb-4 border-b border-gray-100">{subtitle}</p>
+          <div className="flex items-center justify-center gap-3 mt-5">
+            {linkedin_url(LinkedIn)}
+            {github_url(github)}
+            {email_url(email)}
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function linkedin_url(url) {
+  if (!url) return null;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+    >
+      <FaLinkedin />
+      LinkedIn
+    </a>
+  );
+}
+
+function github_url(url) {
+  if (!url) return null;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+    >
+      <FaGithub />
+      GitHub
+    </a>
+  );
+}
+
+function email_url(email) {
+  if (!email) return null;
+  return (
+    <a
+      href={"https://mail.google.com/mail/?view=cm&fs=1&to=" + email}
+      className="flex items-center gap-2 px-3 py-2 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+    >
+      <FaRegEnvelope />
+    </a>
   );
 }
 

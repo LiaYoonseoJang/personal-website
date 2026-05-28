@@ -3,214 +3,323 @@ import instagram from "../images/instagram-logo-1.png";
 import algorithm from "../images/algorithm.png";
 import summary from "../images/feed_summary.png";
 import performance from "../images/post_performance.png";
-import why from "../images/why_seeing_this.png";   
+import why from "../images/why_seeing_this.png";
 import { Link } from "react-router-dom";
 
-const sectionTitle = "text-xl font-bold mt-14 mb-4 text-purple-600 tracking-wide";
-const bigTitle = "text-3xl font-extrabold mt-12 mb-7 text-pink-600";
-const paragraph = "text-base mb-7 text-black";
-const list = "mb-6 space-y-2 pl-5 text-black";
-const subheading = "text-lg font-semibold mt-7 mb-3 text-black";
-const highlight = "font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-orange-400";
+const Tag = ({ children }) => (
+  <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-purple-50 text-purple-600 border border-purple-100 mr-2 mb-2">
+    {children}
+  </span>
+);
 
+const SectionLabel = ({ children }) => (
+  <p className="text-xs font-bold uppercase tracking-widest text-purple-500 mb-2">{children}</p>
+);
+
+const Divider = () => <hr className="my-10 border-gray-100" />;
 
 const InstagramCaseStudy = () => (
-<div className="font-inter">
-<div className="min-h-screen bg-gradient-to-tr from-yellow-400 via-red-500 to-pink-500 text-white px-4 py-10">
-<div className="max-w-3xl mx-auto bg-white text-black p-8 rounded-3xl shadow-xl backdrop-blur-md">  
-      <img src={instagram} alt="Instagram" className="w-44 mx-auto mb-6" />
-      <h1 className="text-4xl font-extrabold text-black border-b-4 border-pink-500 pb-3 mb-6 tracking-wide">
-        Improving Algorithmic Transparency on Instagram
-      </h1>
-      <h2 className="text-lg mb-10 text-black italic text-center">
-        Empowering college-aged creators and users through clarity, feedback, and control.
-      </h2>
+  <div className="min-h-screen bg-gray-50 py-10 px-4">
+    <div className="max-w-3xl mx-auto">
 
-      {/* CONTEXT */}
-      <h3 className={sectionTitle}>Context</h3>
-      <p className={paragraph + " mb-6"}>
-        Instagram’s recommendation algorithm plays a central role in shaping what users see—affecting not only individual user experiences but also content reach and creator visibility. Many college-aged users (18–24) report frustration and confusion about how the algorithm prioritizes posts, stories, and reels. This lack of transparency leads to decreased trust in the platform and uncertainty around how to grow their audience or engage meaningfully with content.
-      </p>
-      <p className={paragraph + " mb-6"}>
-        This case study focuses on urban college students with interests in photography, fashion, and social media—users who are both content creators and consumers. With relatively low-to-moderate income levels and high motivations to gain visibility or share life experiences, this segment is particularly sensitive to changes in algorithmic behavior. By increasing transparency into how content is ranked and surfaced, Instagram has the opportunity to improve user trust, foster more intentional engagement, and empower creators to better navigate the platform.
-      </p>
+      {/* Header */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-6">
+        <Link to="/" className="text-sm text-gray-400 hover:text-gray-600 mb-6 inline-block">← Back to Portfolio</Link>
+        <img src={instagram} alt="Instagram" className="h-12 mb-6" />
+        <h1 className="text-3xl font-bold text-gray-900 mb-3">
+          Rebuilding Trust Through Algorithm Transparency on Instagram
+        </h1>
+        <p className="text-gray-500 text-base leading-relaxed mb-6">
+          How might Instagram rebuild trust with Gen Z creators by making its recommendation system more transparent, understandable, and controllable?
+        </p>
+        <div className="flex flex-wrap">
+          <Tag>User Research</Tag>
+          <Tag>Trust & Safety</Tag>
+          <Tag>Creator Tools</Tag>
+          <Tag>Gen Z</Tag>
+        </div>
+      </div>
 
-      {/* HYPOTHESIS */}
-      <h3 className={sectionTitle + " mb-6"}>Hypothesis</h3>
-      <p className="text-pink-400 font-semibold mb-6">
-        <span className={highlight}>If Instagram introduces a centralized algorithm transparency hub that explains how feed content is ranked, includes a “Why am I seeing this?” label for all post types, and offers user controls to adjust feed preferences, then trust in the platform and intentional engagement will increase among users.</span>
-      </p>
+      {/* TL;DR */}
+      <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 mb-6">
+        <p className="text-xs font-bold uppercase tracking-widest text-purple-500 mb-3">TL;DR</p>
+        <p className="text-gray-700 text-sm leading-relaxed">
+          62% of social media users 18–24 don't understand why they see certain content. This case study proposes an <strong>Algorithm Transparency Toolkit</strong> — "Why am I seeing this?" labels, a centralized transparency hub, and creator visibility insights — to increase platform trust and intentional engagement among Gen Z.
+        </p>
+      </div>
 
-      {/* THE MARKET */}
-      <h3 className={sectionTitle + " mb-6"}>The Market</h3>
-      <p className={paragraph}>
-        Competitors like TikTok and YouTube have taken meaningful steps toward improving algorithmic transparency by introducing features such as “Why this video?” explanations and tools to reset or influence recommendation systems. TikTok allows users to better understand how their For You feed is curated and offers more control over suggested content, while YouTube enables users to manage their watch history to shape future recommendations. Even outside of social media, platforms like Spotify offer subtle algorithm insights through personalized labels like “Made for You” or “Because you listened to...,” reinforcing that users respond positively to transparency in algorithm-driven experiences.
-      </p>
-      <p className={paragraph + " mb-6"}>
-        Despite this, Instagram’s current transparency tools remain limited, providing partial explanations for ads or suggested posts without a comprehensive, user-facing breakdown. As regulatory pressure mounts and Gen Z users increasingly demand control and clarity, there is a clear industry trend toward greater algorithm explainability.
-      </p>
+      {/* Main content */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 space-y-10">
 
+        {/* Context */}
+        <section>
+          <SectionLabel>Context</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">The Problem with Black-Box Algorithms</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Instagram's recommendation algorithm shapes what billions of people see — but for most users, how it works is a complete mystery. College-aged users (18–24) who use Instagram as both consumers and creators report consistent frustration: posts get wildly different engagement for no apparent reason, and the platform offers almost no explanation.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Meanwhile, competitors like TikTok and YouTube have started offering "Why this video?" explanations and feed reset controls, raising user expectations. Instagram risks falling behind on trust — a metric that increasingly drives Gen Z platform loyalty.
+          </p>
+        </section>
 
-      {/* AUDIENCE */}
-      <h3 className={sectionTitle+ " mb-6"}>The Audience</h3>
-      <p className={paragraph}>
-        The target audience for this feature is college-aged Instagram users between 18 and 24, primarily based in urban areas across the United States and other major global cities, where digital engagement and creator culture are especially active. These users often play dual roles as both content consumers and casual creators, regularly posting stories, reels, and photos to share their experiences, build a following, or connect with niche communities.
-      </p>
-      <p className={paragraph + " mb-6"}>
-        Many are deeply invested in growing their visibility but feel frustrated by the lack of clarity around how the algorithm influences what content gets seen. Their interests often span social media, photography, fashion, lifestyle, and self-expression, and they are highly motivated to understand and optimize their presence on the platform. This group includes personas like student influencers, aspiring creatives, and digitally fluent students, all of whom are especially sensitive to algorithmic shifts that affect engagement and discoverability.
-      </p>
+        <Divider />
 
-      {/* USER INSIGHTS */}
-      <h3 className={sectionTitle}>User Insights</h3>
-      <p className={paragraph}>
-        Interview and secondary research consistently reveal that college-aged users often feel confused, disempowered, or skeptical about how Instagram’s algorithm works. One student noted, “Sometimes my posts get 100 likes, and sometimes 20 even when I post at the same time. I have no idea why.” Another commented, “I just want to know how to get my content seen without guessing what the algorithm wants.”
-      </p>
-      <p className={paragraph + " mb-6"}>
-        In a 2023 Pew Research survey, 62% of social media users aged 18–24 reported feeling unsure about why certain content appears in their feed, and over 70% said they would value more transparency and control over recommendations. Additionally, internal studies from Meta found that Instagram use was linked to body image concerns and self-esteem issues with algorithm-driven comparisons being a key factor. These insights point to a core user need: greater clarity, predictability, and control over content visibility to reduce frustration and foster more authentic engagement.
-      </p>
+        {/* Hypothesis */}
+        <section>
+          <SectionLabel>Hypothesis</SectionLabel>
+          <div className="bg-gray-50 rounded-xl p-5 border-l-4 border-purple-500">
+            <p className="text-gray-800 font-medium leading-relaxed">
+              If Instagram introduces a centralized algorithm transparency hub, "Why am I seeing this?" labels across all post types, and user controls to adjust feed preferences — then trust in the platform and intentional engagement will increase among 18–24 users.
+            </p>
+          </div>
+        </section>
 
-      {/* USER JOURNEY */}
-{/* USER JOURNEY */}
-<h3 className={sectionTitle}>User Journey</h3>
-<ul className="space-y-4 text-black">
-  <li className="flex gap-3 items-start">
-    <span className="text-pink-500 text-lg">🔓</span>
-    <span>
-      <strong>Login:</strong> User opens the app to check for updates, post a photo, or casually browse.
-    </span>
-  </li>
-  <li className="flex gap-3 items-start">
-    <span className="text-purple-500 text-lg">📜</span>
-    <span>
-      <strong>Feed Browsing:</strong> Content appears in an unpredictable order; user wonders why they’re seeing certain posts.
-    </span>
-  </li>
-  <li className="flex gap-3 items-start">
-    <span className="text-yellow-500 text-lg">🔍</span>
-    <span>
-      <strong>Explore Navigation:</strong> Suggested content doesn’t align well with user interests; lacks transparency labels.
-    </span>
-  </li>
-  <li className="flex gap-3 items-start">
-    <span className="text-green-500 text-lg">❤️</span>
-    <span>
-      <strong>Engage with Content:</strong> User likes, shares, or comments but receives no feedback on how this impacts future recommendations.
-    </span>
-  </li>
-  <li className="flex gap-3 items-start">
-    <span className="text-blue-500 text-lg">📸</span>
-    <span>
-      <strong>Create Content:</strong> User posts a story or reel, but post performance feels random and unexplainable.
-    </span>
-  </li>
-  <li className="flex gap-3 items-start">
-    <span className="text-red-400 text-lg">📊</span>
-    <span>
-      <strong>Monitor Post Performance:</strong> Metrics are available but lack explanation for reach and visibility results.
-    </span>
-  </li>
-</ul>
+        <Divider />
 
+        {/* Target User */}
+        <section>
+          <SectionLabel>Target User</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">The Gen Z Creator-Consumer</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Urban college students (18–24) who use Instagram in dual roles: passively consuming content and actively building an audience. They care deeply about visibility and fairness, and they're the cohort most likely to churn or shift platforms when they feel manipulated.
+          </p>
+          <div className="bg-gray-50 rounded-xl p-5 grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p className="text-2xl font-bold text-purple-500">62%</p>
+              <p className="text-xs text-gray-500 mt-1">of 18–24s don't understand their feed</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-purple-500">70%+</p>
+              <p className="text-xs text-gray-500 mt-1">want more transparency & control</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-purple-500">↑ Trust</p>
+              <p className="text-xs text-gray-500 mt-1">linked to platform loyalty in Gen Z</p>
+            </div>
+          </div>
+        </section>
 
-      {/* BIG TAKEAWAYS */}
-      <h3 className={bigTitle}>Big Takeaways</h3>
-      <ol className="list-decimal ml-6 text-black space-y-3 mb-6">
-        <li>Transparency is an industry-wide demand but poorly implemented by Instagram</li>
-        <li>Gen Z expects explanations, not just personalization</li>
-        <li>Competitors show partial transparency; Instagram can lead with centralization</li>
-        <li>Creating feedback loops builds trust, not just passive consumption</li>
-      </ol>
+        <Divider />
 
-      {/* PROBLEM */}
-      <h3 className={sectionTitle}>The Problem</h3>
-      <p className={paragraph + " mb-6"}>
-        Instagram users face frustration and distrust due to a lack of transparency in how content is ranked and recommended, leading to confusion, inconsistent engagement, and a diminished sense of control over their visibility on the platform.
-      </p>
+        {/* User Insights */}
+        <section>
+          <SectionLabel>User Insights</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">What Research Revealed</h2>
+          <div className="space-y-3 mb-6">
+            <div className="bg-gray-50 rounded-xl p-4 border-l-3 border-gray-200">
+              <p className="text-gray-800 text-sm italic">"Sometimes my posts get 100 likes, and sometimes 20 — same time of day, same type of content. I have no idea why."</p>
+              <p className="text-gray-400 text-xs mt-2">— College student, 21, NYC</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-4">
+              <p className="text-gray-800 text-sm italic">"I just want to know how to get my content seen without guessing what the algorithm wants."</p>
+              <p className="text-gray-400 text-xs mt-2">— Aspiring creator, 20</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
+              <span className="text-xl">❓</span>
+              <div>
+                <p className="font-semibold text-gray-900 text-sm">Feed feels unpredictable and arbitrary</p>
+                <p className="text-gray-600 text-sm mt-1">Users can't build mental models of how their feed is curated, making every scroll feel like a gamble rather than a personalized experience.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
+              <span className="text-xl">📉</span>
+              <div>
+                <p className="font-semibold text-gray-900 text-sm">Creators feel disempowered</p>
+                <p className="text-gray-600 text-sm mt-1">Without knowing why a post performed well or poorly, creators can't improve. Frustration leads to posting less or leaving the platform.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
+              <span className="text-xl">🔒</span>
+              <div>
+                <p className="font-semibold text-gray-900 text-sm">No control over the experience</p>
+                <p className="text-gray-600 text-sm mt-1">Instagram offers almost no tools to shape what you see. Users want to adjust for themselves — not have an invisible system decide for them.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* GOAL */}
-      <h3 className={sectionTitle}>The Goal</h3>
-      <p className={paragraph + " mb-6"}>
-        Rebuild trust and increase engagement by clarifying how Instagram’s algorithm ranks and recommends content.
-        <br />
-        <strong>User:</strong> Feels informed and empowered<br />
-        <strong>Business:</strong> Gains engagement and retention<br />
-        <strong>Metric:</strong> Tool engagement, retention, post frequency
-      </p>
+        <Divider />
 
-      {/* MVP */}
-      <h3 className={sectionTitle}>Feature Prioritization & MVP</h3>
-      <ul className="list-disc ml-6 text-black mb-6 space-y-2">
-        <li>"Why am I seeing this?" Labels on posts and reels</li>
-        <li>Algorithm Transparency Hub with visual breakdowns and FAQs</li>
-        <li>Creator Visibility Insights explaining post performance factors</li>
-        <li>Feed Preference Controls to customize content sources</li>
-        <li>Weekly Algorithm Summary highlighting feed composition</li>
-      </ul>
+        {/* User Journey */}
+        <section>
+          <SectionLabel>User Journey</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Where the Pain Points Hit</h2>
+          <div className="space-y-2">
+            {[
+              { emoji: "🔓", step: "Login", pain: "Opens app to browse or post — no sense of what they'll see" },
+              { emoji: "📜", step: "Feed Browse", pain: "Content appears in unexplained order — confusion about why certain posts surface" },
+              { emoji: "🔍", step: "Explore", pain: "Suggested content doesn't match interests; no transparency labels" },
+              { emoji: "❤️", step: "Engage", pain: "Likes/comments feel pointless — no feedback on how actions shape future recommendations" },
+              { emoji: "📸", step: "Post Content", pain: "Post goes live but reach feels random and unexplainable" },
+              { emoji: "📊", step: "Check Insights", pain: "Metrics exist but don't explain why reach was high or low" },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-xl items-start">
+                <span className="text-lg">{item.emoji}</span>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm">{item.step}</p>
+                  <p className="text-gray-500 text-sm">{item.pain}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      {/* USER TESTING */}
-      <h3 className={sectionTitle}>User Testing & Feedback</h3>
-      <ul className="list-disc ml-6 text-black space-y-2 mb-6">
-        <li><strong>Why am I seeing this?:</strong> Most appreciated; gave quick, contextual clarity</li>
-        <li><strong>Transparency Hub:</strong> Loved if visual and accessible (not buried)</li>
-        <li><strong>Creator Insights:</strong> Valuable to frequent posters; context numbers</li>
-        <li><strong>Weekly Summary:</strong> Nice to have, but not urgent unless integrated well</li>
-      </ul>
+        <Divider />
 
-      {/* FINAL SOLUTION */}
-      <p className={paragraph + " mb-6"}>
-    The final product solution is a cohesive set of in-app features designed to give users clarity, control, and trust in how Instagram’s algorithm ranks and recommends content.
-    This toolkit addresses the core problem of confusion and disempowerment by making the recommendation system more{" "}
+        {/* Competitive */}
+        <section>
+          <SectionLabel>Competitive Landscape</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">How Others Are Approaching Transparency</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left">
+              <thead>
+                <tr className="border-b border-gray-100">
+                  <th className="pb-2 text-gray-500 font-medium">Platform</th>
+                  <th className="pb-2 text-gray-500 font-medium">Transparency Feature</th>
+                  <th className="pb-2 text-gray-500 font-medium">Gap</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600">
+                <tr className="border-b border-gray-50">
+                  <td className="py-3 font-medium text-gray-900">TikTok</td>
+                  <td className="py-3">"Why this video?" + feed reset</td>
+                  <td className="py-3">No creator visibility insights</td>
+                </tr>
+                <tr className="border-b border-gray-50">
+                  <td className="py-3 font-medium text-gray-900">YouTube</td>
+                  <td className="py-3">Watch history management</td>
+                  <td className="py-3">Limited in-feed explanations</td>
+                </tr>
+                <tr className="border-b border-gray-50">
+                  <td className="py-3 font-medium text-gray-900">Spotify</td>
+                  <td className="py-3">"Made For You / Because you listened to…"</td>
+                  <td className="py-3">No user-adjustable controls</td>
+                </tr>
+                <tr>
+                  <td className="py-3 font-medium text-purple-600">Instagram</td>
+                  <td className="py-3">Partial ad explanations only</td>
+                  <td className="py-3 text-purple-500 font-medium">No centralized hub, no creator tools</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-  <span className={highlight}>visible</span>,{" "}
-  <span className={highlight}>understandable</span>, and{" "}
-  <span className={highlight}>actionable</span>.
-</p>
+        <Divider />
 
-<ul className="list-disc ml-6 text-black mb-6 space-y-3">
-  <li>
-    <strong>“Why am I seeing this?” Post Explanation:</strong> Each suggested post across Feed, Explore, and Reels includes an info icon. Tapping the icon reveals a brief, contextual reason (e.g., “You’ve liked similar content”) and offers options to adjust preferences.
-  </li>
-  <li>
-    <strong>Algorithm Transparency Hub:</strong> A centralized page in Settings that visually breaks down how Instagram’s algorithm works across surfaces (Feed, Explore, Reels), including FAQs and onboarding tutorials.
-  </li>
-  <li>
-    <strong>Creator Visibility Insights:</strong> An analytics panel for creators showing how their posts performed, why they reached certain audiences (e.g., boosted by shares or format), and tips to improve engagement.
-  </li>
-  <li>
-    <strong>Weekly Feed Summary:</strong> A digest shown through Stories or push notifications summarizing the feed composition (e.g., 50% from friends, 30% suggested, 20% ads) and nudges for user reflection.
-  </li>
-  <li>
-    <strong>Feed Preference Controls:</strong> Simple toggles that let users adjust their content sources, choose to see more from friends vs. recommended posts, or reduce exposure to certain topics.
-  </li>
-</ul>
+        {/* Solutions */}
+        <section>
+          <SectionLabel>MVP Definition</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">The Algorithm Transparency Toolkit</h2>
+          <div className="space-y-4">
+            <div className="border border-gray-100 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm mb-2">1. "Why am I seeing this?" Labels</p>
+                  <p className="text-gray-600 text-sm">Info icon on every post — tap to see a plain-English reason ("You liked similar content") + option to adjust preferences. Immediate, contextual, low-friction.</p>
+                </div>
+                <img src={why} alt="Why am I seeing this" className="rounded-xl border border-gray-100 w-full" />
+              </div>
+            </div>
+            <div className="border border-gray-100 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm mb-2">2. Algorithm Transparency Hub</p>
+                  <p className="text-gray-600 text-sm">A centralized Settings page with visual breakdowns of how Feed, Explore, and Reels are ranked. FAQs, onboarding tutorial. Surfaced proactively to new users.</p>
+                </div>
+                <img src={algorithm} alt="Algorithm Hub" className="rounded-xl border border-gray-100 w-full" />
+              </div>
+            </div>
+            <div className="border border-gray-100 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm mb-2">3. Creator Visibility Insights</p>
+                  <p className="text-gray-600 text-sm">Analytics panel showing why a post reached (or didn't reach) certain audiences — format signals, share velocity, timing. Actionable tips per post.</p>
+                </div>
+                <img src={performance} alt="Creator Insights" className="rounded-xl border border-gray-100 w-full" />
+              </div>
+            </div>
+            <div className="border border-gray-100 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm mb-2">4. Weekly Feed Summary</p>
+                  <p className="text-gray-600 text-sm">Push notification / Story digest: "This week your feed was 50% friends, 30% suggested, 20% ads." Simple nudge toward reflection and control.</p>
+                </div>
+                <img src={summary} alt="Weekly Summary" className="rounded-xl border border-gray-100 w-full" />
+              </div>
+            </div>
+          </div>
+        </section>
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
-  <img src={algorithm} alt="Algorithm Transparency Hub" className="rounded-xl shadow-md" />
-  <img src={performance} alt="Creator Visibility Panel" className="rounded-xl shadow-md" />
-  <img src={why} alt="Why Am I Seeing This" className="rounded-xl shadow-md" />
-  <img src={summary} alt="Weekly Feed Summary" className="rounded-xl shadow-md" />
-</div>
+        <Divider />
 
-<p className={paragraph}>
-  Together, these features create a more{" "}
-  <span className={highlight}>transparent</span>,{" "}
-  <span className={highlight}>educational</span>, and{" "}
-  <span className={highlight}>empowering</span> Instagram experience for Gen Z users who care deeply about visibility and fairness on the platform.
-</p>
+        {/* User Testing */}
+        <section>
+          <SectionLabel>User Testing</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">What Resonated Most</h2>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { feature: '"Why am I seeing this?"', result: "Most valued — gave instant contextual clarity without extra steps", signal: "high" },
+              { feature: "Transparency Hub", result: "Loved when visual and accessible; disliked when buried in settings", signal: "high" },
+              { feature: "Creator Insights", result: "High value for frequent posters; less relevant for pure consumers", signal: "medium" },
+              { feature: "Weekly Summary", result: "Nice-to-have but low urgency; better as a notification than a page", signal: "low" },
+            ].map((item, i) => (
+              <div key={i} className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-gray-900 text-sm mb-1">{item.feature}</p>
+                <p className="text-gray-500 text-xs">{item.result}</p>
+                <span className={`text-xs mt-2 inline-block font-medium ${item.signal === "high" ? "text-green-600" : item.signal === "medium" ? "text-yellow-600" : "text-gray-400"}`}>
+                  {item.signal === "high" ? "↑ Ship in MVP" : item.signal === "medium" ? "~ Phase 2" : "~ Phase 3"}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
 
+        <Divider />
 
-      {/* CTA */}
-      <div className="text-center mt-8">
-      <Link
-        to="/"
-        className="inline-block px-6 py-3 text-lg font-semibold border border-white text-white bg-gradient-to-r from-pink-500 to-yellow-500 hover:opacity-90 rounded-full transition"
-    >
-        Return to Projects
-    </Link>
+        {/* Metrics */}
+        <section>
+          <SectionLabel>Measuring Success</SectionLabel>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Key Metrics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 text-center">
+              <p className="text-2xl font-bold text-purple-500">↑ DAU</p>
+              <p className="text-xs text-gray-500 mt-1">transparency hub engagement among 18–24</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 text-center">
+              <p className="text-2xl font-bold text-purple-500">↑ Post freq.</p>
+              <p className="text-xs text-gray-500 mt-1">creators posting more after seeing insights</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 text-center">
+              <p className="text-2xl font-bold text-purple-500">↓ Churn</p>
+              <p className="text-xs text-gray-500 mt-1">monthly churn among Gen Z segment</p>
+            </div>
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* Final Thoughts */}
+        <section>
+          <SectionLabel>Final Thoughts</SectionLabel>
+          <p className="text-gray-600 leading-relaxed">
+            Gen Z doesn't just want a better algorithm — they want to understand and trust the one they already have. Transparency isn't about exposing trade secrets; it's about giving users enough context to feel like partners in their own experience. If Instagram gets this right, it doesn't just reduce churn — it earns the kind of loyalty that no recommendation engine can buy.
+          </p>
+        </section>
 
       </div>
+
+      <div className="text-center mt-8 mb-12">
+        <Link to="/" className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-colors">
+          ← Back to Portfolio
+        </Link>
+      </div>
+
     </div>
   </div>
-</div>
 );
+
 export default InstagramCaseStudy;
