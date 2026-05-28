@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../images/profile-circle.png";
+import profile from "../images/profile.jpg";
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 function Card({ name, title, subtitle, social }) {
@@ -8,7 +8,7 @@ function Card({ name, title, subtitle, social }) {
     <div className="w-full">
       <div className="flex flex-col justify-center max-w-sm mx-auto bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
         <img
-          className="w-28 mx-auto rounded-full border-4 border-gray-100 shadow-md"
+          className="w-28 h-28 mx-auto rounded-full border-4 border-gray-100 shadow-md object-cover object-top"
           src={profile}
           alt="Lia Jang profile"
         />

@@ -97,3 +97,90 @@ const data = {
   ],
 };
 export default data;
+
+export const experience = [
+  {
+    company: "Capgemini Invent",
+    role: "Associate Consultant",
+    period: "Aug 2025 – Present",
+    location: "New York, NY",
+    type: "full-time",
+    bullets: [
+      "Incoming Associate Consultant — strategy & technology consulting",
+    ],
+    tags: ["Consulting", "Strategy"],
+  },
+  {
+    company: "LG CNS",
+    role: "Smart Logistics Product Analyst Intern",
+    period: "Jun 2025 – Aug 2025",
+    location: "Englewood Cliffs, NJ",
+    type: "internship",
+    bullets: [
+      "Analyzed 100k+ shipment lanes with SQL & Python, boosting forecast accuracy by 15%",
+      "Engineered automated KPI pipelines (PCU, OTD) across 7+ warehouses and 80+ carriers via Tableau",
+      "Proposed shipment optimization framework aligned across ops and tech teams",
+    ],
+    tags: ["SQL", "Python", "Tableau", "Logistics"],
+  },
+  {
+    company: "EarthMera",
+    role: "Product & Data Analyst Intern",
+    period: "Feb 2025 – May 2025",
+    location: "Brooklyn, NY",
+    type: "internship",
+    bullets: [
+      "Led A/B testing on onboarding flows → 18% increase in activation",
+      "Ran funnel analysis on 150+ user sessions, uncovering 3 major drop-offs",
+      "Built Tableau dashboards to monitor retention and conversion for leadership",
+    ],
+    tags: ["A/B Testing", "Product", "UX", "Tableau"],
+  },
+  {
+    company: "Juliette",
+    role: "Product Management Intern",
+    period: "Feb 2024 – Jun 2024",
+    location: "New York, NY",
+    type: "internship",
+    bullets: [
+      "Launched AR/VR features with design & engineering teams, reducing support time by 25%",
+      "Authored feature specs and user stories driving 5+ customer-facing UX features",
+      "Won 2024 IndieBio Alumni Challenge 🏆",
+    ],
+    tags: ["AR/VR", "Agile", "UX", "PRDs"],
+  },
+  {
+    company: "Mobyus",
+    role: "Back-End Product Management Intern",
+    period: "Jun 2024 – Aug 2024",
+    location: "Seoul, South Korea",
+    type: "internship",
+    bullets: [
+      "Improved TAMS performance by 12.5% refining queueing logic with backend engineers",
+    ],
+    tags: ["Java", "C", "Backend", "AI Robotics"],
+  },
+  {
+    company: "Scale AI",
+    role: "AI Training Data Analyst",
+    period: "Feb 2024 – May 2024",
+    location: "San Francisco, CA",
+    type: "internship",
+    bullets: [
+      "Improved LLM accuracy across Java, Python, and C; reduced AHT by 10%",
+    ],
+    tags: ["LLM", "Python", "AI"],
+  },
+  {
+    company: "Kearney",
+    role: "Consulting Research Assistant",
+    period: "Jun 2023 – Aug 2023",
+    location: "Seoul, South Korea",
+    type: "internship",
+    bullets: [
+      "Researched global smart city initiatives (Helsinki, Singapore, NYC), identifying 10+ emerging technologies",
+      "Applied regression analysis on 10+ datasets for AI-based traffic optimization — up to 15% efficiency gains",
+    ],
+    tags: ["Research", "Smart City", "Regression", "Consulting"],
+  },
+];
