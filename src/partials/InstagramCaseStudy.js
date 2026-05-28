@@ -1,6 +1,5 @@
 import React from "react";
 import instagram from "../images/instagram-logo-1.png";
-import why from "../images/why_seeing_this.png";
 import { Link } from "react-router-dom";
 
 const S = {
