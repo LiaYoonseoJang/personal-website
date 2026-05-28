@@ -107,21 +107,21 @@ const NetflixCaseStudy = () => (
           <h2 className="text-xl font-bold text-gray-900 mb-4">Pain Points</h2>
           <div className="space-y-4">
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl"></span>
+              <span style={{width:10,height:10,borderRadius:"50%",background:"#ef4444",display:"inline-block",flexShrink:0,marginTop:5}}></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Decision fatigue is real</p>
                 <p className="text-gray-600 text-sm mt-1">A user watching 6 hrs/week may spend 1.5+ hrs/month just choosing what to watch. The scroll loop is frustrating, not enjoyable.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl"></span>
+              <span style={{width:10,height:10,borderRadius:"50%",background:"#ef4444",display:"inline-block",flexShrink:0,marginTop:5}}></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Recommendations feel stale</p>
                 <p className="text-gray-600 text-sm mt-1">The algorithm is slow to adapt when user preferences shift. Users who finish a genre binge keep seeing the same type of content weeks later.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <span className="text-xl"></span>
+              <span style={{width:10,height:10,borderRadius:"50%",background:"#ef4444",display:"inline-block",flexShrink:0,marginTop:5}}></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">Hidden gems stay hidden</p>
                 <p className="text-gray-600 text-sm mt-1">Niche titles that users would love get buried under mainstream recommendations, making the library feel smaller than it is.</p>
