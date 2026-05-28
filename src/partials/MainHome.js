@@ -6,7 +6,7 @@ import data from "../assets/data";
 import profileImg from "../images/profile.jpg";
 
 const MainHome = () => {
-  const { name, title, subtitle, social, about, skills, projects, case_studies } = data;
+  const { name, social, about, skills, projects, case_studies } = data;
 
   return (
     <div style={{ fontFamily: "'Inter', -apple-system, sans-serif", background: "#fafafa", minHeight: "100vh" }}>
@@ -76,11 +76,12 @@ const MainHome = () => {
         {/* BY THE NUMBERS */}
         <section style={{ padding: "48px 0", borderBottom: "1px solid #f0f0f0" }}>
           <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#999", marginBottom: 20 }}>By the numbers</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
             {[
+              { number: "6+", label: "Internships & roles", sub: "Fortune 500s · startups · consulting" },
+              { number: "18%", label: "Activation uplift", sub: "EarthMera A/B testing" },
+              { number: "15%", label: "Forecast accuracy boost", sub: "LG CNS · 100k+ shipment lanes" },
               { number: "2", label: "PM case studies", sub: "Netflix · Instagram" },
-              { number: "3+", label: "Shipped products", sub: "Web · AI · AR/VR" },
-              { number: "300M+", label: "Users analyzed", sub: "Across case studies" },
             ].map(({ number, label, sub }) => (
               <div key={label} style={{ background: "#fff", border: "1px solid #f0f0f0", borderRadius: 14, padding: "20px 22px" }}>
                 <p style={{ fontSize: 28, fontWeight: 700, color: "#111", letterSpacing: "-1px", lineHeight: 1 }}>{number}</p>

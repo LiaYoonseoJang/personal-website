@@ -1,4 +1,3 @@
-import React from "react";
 import netflixImg from '../images/netflix.jpg';
 import instaImg from '../images/instagram.png';
 import mininiImg from '../images/minini.jpg';
