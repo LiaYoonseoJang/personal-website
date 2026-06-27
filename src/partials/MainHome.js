@@ -88,11 +88,17 @@ const MainHome = () => {
         <div style={{ maxWidth: 1080, margin: "0 auto", height: 58, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 17, fontWeight: 700, letterSpacing: "-0.3px" }}>Lia Yoonseo Jang</span>
           <div style={{ display: "flex", gap: 36 }}>
-            {[["About", "#about"], ["Why PM", "#why-pm"], ["Experience", "#experience"], ["Skills", "#skills"], ["Case Studies", "#cases"], ["Projects", "#projects"]].map(([label, href]) => (
+          {[["About", "#about"], ["Why PM", "#why-pm"], ["Experience", "#experience"], ["Skills", "#skills"], ["Case Studies", "#cases"], ["Projects", "#projects"], ["Journal", "/journal"]].map(([label, href]) =>
+            href.startsWith("/") ? (
+              <Link key={href} to={href} className="nav-a" style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#b09070", textDecoration: "none", fontWeight: 500, letterSpacing: "0.06em", transition: "color 0.15s" }}>
+                {label}
+              </Link>
+            ) : (
               <a key={href} href={href} className="nav-a" style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#b09070", textDecoration: "none", fontWeight: 500, letterSpacing: "0.06em", transition: "color 0.15s" }}>
                 {label}
               </a>
-            ))}
+            )
+          )}
           </div>
         </div>
       </nav>

@@ -4,6 +4,8 @@ import MainHome from "./partials/MainHome";
 import NetflixCaseStudy from "./partials/NetflixCaseStudy";
 import InstagramCaseStudy from "./partials/InstagramCaseStudy";
 import MininiProject from './partials/MininiProject';
+import ProductJournal from './partials/ProductJournal';
+import JournalEntry from './partials/JournalEntry';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
@@ -20,10 +22,11 @@ function App() {
         <Route path="/netflix-case-study" component={NetflixCaseStudy} />
         <Route path="/instagram-case-study" component={InstagramCaseStudy} />
         <Route path="/minini-project" component={MininiProject} />
+        <Route exact path="/journal" component={ProductJournal} />
+        <Route path="/journal/:id" component={JournalEntry} />
       </Switch>
     </Router>
   );
 }
 
 export default App;
-
